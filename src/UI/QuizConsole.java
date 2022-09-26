@@ -2,6 +2,8 @@ package UI;
 
 import Model.Question;
 import Model.Quiz;
+import Persistence.JsonReader;
+import Persistence.JsonWriter;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -11,6 +13,7 @@ import java.util.Scanner;
 
 public class QuizConsole {
     private final Scanner input = new Scanner(System.in);
+    int starNum;
     private Quiz quiz;
     private static final String DESTINATION = "./data/constellations.json";
     private JsonReader reader = new JsonReader(DESTINATION);
@@ -134,7 +137,10 @@ public class QuizConsole {
                 case "t":
                     createQuiz();
                     initiateQuiz();
+
                     seeQuiz();
+                    displayEndingMenu();
+
                     keepDisplay = false;
                     break;
                 case "l" : loadConstellation();
@@ -195,10 +201,10 @@ public class QuizConsole {
                 80.0, 88.0, 9.0));
         quiz.addQuestion(new Question("What is 60 + 50 + 40", 'D', 2, 110.0, 90.0,
                 98.0, 150.0));
-        quiz.addQuestion(new Question("What is 300 - 77", 'A', 2, 221.0, 223.0,
+        quiz.addQuestion(new Question("What is 300 - 77", 'A', 2, 223.0, 221.0,
                 250.0, 200.0));
-        quiz.addQuestion(new Question("What is 1900 - 600", 'A', 2, 1900.0,
-                1850.0, 1825.0, 1875.0));
+        quiz.addQuestion(new Question("What is 1900 - 600", 'A', 2, 1300.0,
+                1200.0, 1400.0, 1500.0));
 
 
         quiz.addQuestion(new Question("What added to 21 and 53 is 138", 'A', 3, 60.0,
@@ -231,8 +237,8 @@ public class QuizConsole {
         quiz.addQuestion(new Question("12 * 0.4 = ___", 'B', 4, 4.5, 4.8, 3.3, 4.9));
 
 
-        quiz.addQuestion(new Question("94/100 = ___", 'D', 5, 0.93, 0.095, 0.93, 0.94));
-        quiz.addQuestion(new Question("3/12 = ___", 'B', 5, 0.23, 0.25, 0.24, 0.2));
+        quiz.addQuestion(new Question("94/100 = ___", 'D', 5, 0.93, 0.095, 0.91, 0.94));
+        quiz.addQuestion(new Question("3/12 = ___", 'B', 5, 0.23, 0.25, 0.27, 0.2));
         quiz.addQuestion(new Question("25% of 44 = ___", 'D', 5, 16, 12, 13, 11));
         quiz.addQuestion(new Question("80% of 3 = ___", 'A', 5, 2.4, 1.2, 2.3, 2.5));
         quiz.addQuestion(new Question("55% of 50 = ___", 'A', 5, 27.5, 28.5, 29.3, 25.2));
@@ -351,6 +357,7 @@ public class QuizConsole {
                 quiz.incrementScore(question.getNumAttempts());
                 System.out.println("You got it!!");
                 System.out.println("A star has been added to the night sky!!");
+                starNum++;
                 break;
             } else {
                 question.incrementCurrentAttempts();
@@ -365,8 +372,10 @@ public class QuizConsole {
         }
     }
 
+    // shows final score info
     public void seeQuiz() {
         float score = quiz.getFinalScore();
+        System.out.println("You've lit up the night sky. Great job!");
         System.out.println("Your final score is " + score);
         System.out.println("You got approximately " + (score / 15) * 100 + "%");
 //        System.out.println("You collected " + starNum + " stars!");
