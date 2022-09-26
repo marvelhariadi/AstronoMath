@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AstronoMat.iml" filepath="$PROJECT_DIR$/AstronoMat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AstronoMath.iml" filepath="$PROJECT_DIR$/AstronoMath.iml" />
       <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
     </modules>
