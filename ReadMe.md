@@ -1,4 +1,4 @@
-# AstronoMath Educational Quiz
+# AstronoMath
 
 ## Description:
 AstronoMath is an EdTech mobile application that teaches elementary level math in a fun, cosmic, astronomical way. The user answers math questions in a quiz format. The user starts with a empty night sky, city lights blocking out all starlight. With every correct answer, a star is added to the night sky. The brightness of the star is based on how many attempts it takes for the user to answer a question. The dimmer the star, the more questions the user required until recieving a right answer. Users have 3 attempts maximum for every questions. Stars will slowly accumulate in the night sky the more questions are answered correctly. The user can also unlock constellations at the end of every quiz round. Slowly, their collection of constellations will build. 
