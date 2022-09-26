@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class QuizConsole {
     private final Scanner input = new Scanner(System.in);
-    int starNum;
+    private int starNum;
     private Quiz quiz;
     private static final String DESTINATION = "./data/constellations.json";
     private JsonReader reader = new JsonReader(DESTINATION);

@@ -21,6 +21,13 @@ Elementary math. astronomy, light pollution.
 ## UML Diagram
 <img src="./data/UMLHelloHacks2022.drawio.png"/>
 
+## UI Demonstration
+<img src="./data/Uidemo1.gif"/>
+<img src="./data/Uidemo2.gif"/>
+<img src="./data/Uidemo3.gif"/>
+
+## Credit
+Created with Michael Velve, Rishabh Ghanty, and Felix Li for HelloHacks 2022 at the University of British Columbia
 
 
 
