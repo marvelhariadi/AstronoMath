@@ -26,6 +26,8 @@ Elementary math. astronomy, light pollution.
 <img src="./data/Uidemo2.gif"/>
 <img src="./data/Uidemo3.gif"/>
 
+Note: the code that we created at the hackathon provides console functionality. UI Demo was created on Figma. 
+
 ## Credit
 Created with Michael Velve, Rishabh Ghanty, and Felix Li for HelloHacks 2022 at the University of British Columbia
 
